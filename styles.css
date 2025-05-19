@@ -109,7 +109,7 @@ body.light-mode .overlay {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
     padding: 0 1rem;
     margin-top: 2rem;
@@ -137,18 +137,21 @@ body.light-mode .hero-card {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    display: block;
 }
 
 .hero-card h3 {
     color: #e62429;
     font-size: 1.5rem;
     margin-top: 1rem;
+    text-align: center;
 }
 
 .hero-card p {
     padding: 0 1rem 1rem;
     font-size: 0.95rem;
     color: #ccc;
+    text-align: center;
 }
 
 body.light-mode .hero-card p {
@@ -422,7 +425,7 @@ body.light-mode .modal-content {
     }
 
     .hero-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
     .chat-box-container {
