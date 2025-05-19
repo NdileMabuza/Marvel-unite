@@ -1,0 +1,441 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+body.light-mode .sidebar {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    color: #e62429;
+    margin-bottom: 2rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-item {
+    margin-bottom: 1rem;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+body.light-mode .nav-item a {
+    color: #000;
+}
+
+.nav-item a:hover {
+    color: #e62429;
+    transform: translateX(10px);
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 1rem;
+    width: calc(100% - 250px);
+}
+
+.landing-container {
+    background: url('images/Avengers-gif.gif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+body.light-mode .overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000;
+}
+
+.landing-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    color: #e62429;
+}
+
+.landing-subtitle {
+    font-size: 1.2rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
+}
+
+.hero-card {
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+body.light-mode .hero-card {
+    background-color: #ddd;
+    color: #000;
+}
+
+.hero-card:hover {
+    transform: scale(1.05);
+}
+
+.hero-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.hero-card h3 {
+    color: #e62429;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hero-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+body.light-mode .hero-card p {
+    color: #000;
+}
+
+.about-container {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #e62429;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 1.5rem;
+}
+
+.about-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.read-more-container {
+    padding: 2rem;
+}
+
+.chat-box-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 1002;
+}
+
+.chat-header {
+    background-color: #e62429;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-messages {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #e62429;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-switch-wrapper {
+    margin-top: 2rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #e62429;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.light-mode .modal {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.modal-content {
+    background-color: rgba(17, 17, 17, 0.8);
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+body.light-mode .modal-content {
+    background-color: rgba(221, 221, 221, 0.8);
+    color: #000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Chat bubbles */
+.message {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user, .hero {
+    background-color: #e62429;
+    color: white;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ddd;
+    color: black;
+    text-align: left;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 2px;
+    opacity: 0;
+    animation: typing 1.5s infinite;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Emoji Picker */
+.emoji-picker {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1003;
+    display: none;
+}
+
+.emoji-picker.show {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hero-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .chat-box-container {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-box-container {
+        width: 200px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers Assemble - Heroes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo">Avengers</div>
+    <ul class="nav-list">
+        <li class="nav-item">
+            <a href="index.html">
+                <div class="icon home-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="label">Home</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="heroes.html">
+                <div class="icon heroes-icon">
+                    <i class="fas fa-superpowers"></i>
+                </div>
+                <span class="label">Heroes</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html">
+                <div class="icon about-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <span class="label">About Us</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="game.html">
+                <div class="icon game-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <span class="label">Play Game</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="read-more.html">
+                <div class="icon read-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <span class="label">Read More</span>
+            </a>
+        </li>
+    </ul>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="hero-grid">
+        <!-- Hero cards will be dynamically inserted here -->
+    </div>
+</div>
+
+<div class="chat-box-container">
+    <!-- Chat box will be dynamically inserted here -->
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
