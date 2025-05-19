@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const themeSwitch = document.getElementById('theme-checkbox');
+
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
     const heroData = {
         thor: {
             bio: {
@@ -292,7 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const heroGrid = document.querySelector('.hero-grid');
     const chatBoxContainer = document.querySelector('.chat-box-container');
-    const themeSwitch = document.getElementById('theme-checkbox');
     const emojiPicker = document.createElement('div');
     emojiPicker.className = 'emoji-picker';
     emojiPicker.innerHTML = `
@@ -471,6 +478,37 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = hero.image;
             return img;
         });
+
+        const upBtn = document.getElementById('upBtn');
+        const leftBtn = document.getElementById('leftBtn');
+        const rightBtn = document.getElementById('rightBtn');
+        const downBtn = document.getElementById('downBtn');
+
+        if (upBtn && leftBtn && rightBtn && downBtn) {
+            upBtn.addEventListener('click', () => {
+                if (direction !== 'DOWN') {
+                    direction = 'UP';
+                }
+            });
+
+            leftBtn.addEventListener('click', () => {
+                if (direction !== 'RIGHT') {
+                    direction = 'LEFT';
+                }
+            });
+
+            rightBtn.addEventListener('click', () => {
+                if (direction !== 'LEFT') {
+                    direction = 'RIGHT';
+                }
+            });
+
+            downBtn.addEventListener('click', () => {
+                if (direction !== 'UP') {
+                    direction = 'DOWN';
+                }
+            });
+        }
 
         function drawGame() {
             ctx.fillStyle = 'black';
