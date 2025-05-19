@@ -466,6 +466,11 @@ body.light-mode .modal-content {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+    }
+
     .sidebar {
         width: 100%;
         height: auto;
@@ -486,6 +491,14 @@ body.light-mode .modal-content {
 
     .chat-box-container {
         width: 250px;
+    }
+
+    .game-controls {
+        flex-direction: row;
+    }
+
+    .game-controls div {
+        flex-direction: column;
     }
 }
 
